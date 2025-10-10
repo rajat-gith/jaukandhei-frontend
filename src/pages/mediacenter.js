@@ -1,7 +1,7 @@
 import React from 'react';
 
 function mediacenter() {
-    return <div>AboutUs</div>;
+    return <div>Media centers</div>;
 }
 
 export default mediacenter;
