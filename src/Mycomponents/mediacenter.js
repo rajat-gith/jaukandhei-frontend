@@ -1,7 +1,5 @@
-import React from 'react'
+import React from 'react';
 
 export default function mediacenter() {
-  return (
-    <div>mediacenter</div>
-  )
+    return <div>mediacenter</div>;
 }

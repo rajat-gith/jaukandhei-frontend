@@ -1,68 +1,64 @@
-import React, { useState } from "react";
-import "./styles/Navbar.css";
-import { Link } from "react-router-dom";
+import React, { useState } from 'react';
+import './styles/Navbar.css';
+import { Link } from 'react-router-dom';
 
 function Header() {
-	const [menuOpen, setMenuOpen] = useState(false);
-	const [activeLink, setActiveLink] = useState("Home");
+    const [menuOpen, setMenuOpen] = useState(false);
+    const [activeLink, setActiveLink] = useState('Home');
 
-	const toggleMenu = () => setMenuOpen(!menuOpen);
+    const toggleMenu = () => setMenuOpen(!menuOpen);
 
-	const handleLinkClick = (link) => {
-		setActiveLink(link);
-		// setMenuOpen(false); // optional: auto close after clicking
-	};
+    const handleLinkClick = (link) => {
+        setActiveLink(link);
+        setMenuOpen(false); // Close menu after clicking link
+    };
 
-	// Map link names to their paths
-	const navLinks = [
-		{ name: "Home", path: "/" },
-		{ name: "About Us", path: "/about" },
-		{ name: "Our Work", path: "/" }, 
-		{ name: "Media Centers", path: "/media" },
-		{ name: "Contact Us", path: "/" },
-		{ name: "Shop", path: "/" },
-		//{ name: "Get Involved", path: "/get-involved" },
-	];
+    const navLinks = [
+        { name: 'Home', path: '/' },
+        { name: 'About Us', path: '/about' },
+        { name: 'Our Work', path: '/' },
+        { name: 'Media Centers', path: '/media' },
+        { name: 'Contact Us', path: '/' },
+        { name: 'Shop', path: '/' },
+    ];
 
-	return (
-		<div className="App">
-			{/* Navbar */}
-			<nav>
-				{/* Left: Logo */}
-				<div className="logo">
-					<img src="logo2.jpeg" alt="Logo" />
-				</div>
+    return (
+        <div className="App">
+            <nav>
+                {/* Logo */}
+                <Link to="/" className="nav-logo">
+                    <div className="logo">
+                        <img src="logo2.jpeg" alt="Logo" />
+                    </div>
+                </Link>
 
-				{/* Hamburger */}
-				<div className="hamburger" onClick={toggleMenu}>
-					<i
-						className={menuOpen ? "ri-close-line" : "ri-menu-line"}
-					></i>
-				</div>
+                {/* Hamburger */}
+                <div className="hamburger" onClick={toggleMenu}>
+                    <i className={menuOpen ? 'ri-close-line' : 'ri-menu-line'}></i>
+                </div>
 
-				{/* Center: Menu */}
-				<ul className={`nav-links ${menuOpen ? "active" : ""}`}>
-					{navLinks.map(({ name, path }) => (
-						<li key={name}>
-							<Link
-								to={path}
-								className={activeLink === name ? "active" : ""}
-								onClick={() => handleLinkClick(name)}
-							>
-								{name}
-							</Link>
-						</li>
-					))}
-				</ul>
-				
+                {/* Menu Links */}
+                <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
+                    {navLinks.map(({ name, path }) => (
+                        <li key={name}>
+                            <Link
+                                to={path}
+                                className={activeLink === name ? 'active' : ''}
+                                onClick={() => handleLinkClick(name)}
+                            >
+                                {name}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
 
-				{/* Right: Register Button */}
-				<div className="nav-action">
-					<button className="register-btn">Register</button>
-				</div>
-			</nav>
-		</div>
-	);
+                {/* Register Button */}
+                {/* <div className="nav-action">
+                    <button className="register-btn">Register</button>
+                </div> */}
+            </nav>
+        </div>
+    );
 }
 
 export default Header;

@@ -1,80 +1,80 @@
 .socialwork-container {
-  background-color: #f9f6ef;
-  padding: 60px 80px;
-  font-family: "Poppins", sans-serif;
+    background-color: #f9f6ef;
+    padding: 60px 80px;
+    font-family: 'Poppins', sans-serif;
 }
 
 .socialwork-title {
-  text-align: center;
-  color: #e15d1e;
-  font-size: 2.8rem;
-  font-weight: 700;
-  
-  font-family: Instrument Sans;
+    text-align: center;
+    color: #e15d1e;
+    font-size: 2.8rem;
+    font-weight: 700;
+
+    font-family: Instrument Sans;
 }
 
 .socialwork-line {
-  width: 650px;
-  border: 2px solid #e15d1e;
-  margin: 15px auto 60px;
+    width: 650px;
+    border: 2px solid #e15d1e;
+    margin: 15px auto 60px;
 }
 
 .socialwork-section {
-  display: flex;
-  align-items: flex-start;
-  gap: 40px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: flex-start;
+    gap: 40px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
 }
 
 .socialwork-section.reverse {
-  flex-direction: row-reverse;
+    flex-direction: row-reverse;
 }
 
 .socialwork-img {
-  width: 420px;
-  height: 290px;
-  border-radius: 10px;
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
+    width: 420px;
+    height: 290px;
+    border-radius: 10px;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+    object-fit: cover;
 }
 
 .socialwork-text-box {
-  background-color: #fff8d9;
-  padding: 25px 30px;
-  border-radius: 10px;
-  height: 240px;
-  flex: 1;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    background-color: #fff8d9;
+    padding: 25px 30px;
+    border-radius: 10px;
+    height: 240px;
+    flex: 1;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .socialwork-text-box h2 {
-  font-size: 1.4rem;
-  color: #222;
-  margin-bottom: 10px;
-  font-weight: 600;
+    font-size: 1.4rem;
+    color: #222;
+    margin-bottom: 10px;
+    font-weight: 600;
 }
 
 .socialwork-text-box p {
-  color: #333;
-  line-height: 1.6;
-  font-size: 1rem;
-  margin-bottom: 10px;
+    color: #333;
+    line-height: 1.6;
+    font-size: 1rem;
+    margin-bottom: 10px;
 }
 
 @media (max-width: 900px) {
-  .socialwork-section {
-    flex-direction: column;
-    text-align: center;
-  }
+    .socialwork-section {
+        flex-direction: column;
+        text-align: center;
+    }
 
-  .socialwork-img {
-    width: 100%;
-    max-width: 400px;
-    margin: 0 auto;
-  }
+    .socialwork-img {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
 
-  .socialwork-text-box {
-    text-align: left;
-  }
+    .socialwork-text-box {
+        text-align: left;
+    }
 }
