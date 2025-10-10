@@ -1,0 +1,197 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fff;
+  color: #333;
+}
+
+/* Section wrapper */
+.intro-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px;
+  background: #fff;
+}
+
+/* Left Content */
+.intro-text {
+  max-width: 55%;
+}
+
+.intro-text h1 {
+  font-size: 63px;
+  color: #800000;
+  margin-bottom: 10px;
+  margin-top: 1px;
+  font-family: Josefin Sans;
+}
+
+.orange-line {
+  width: 72px;
+  height: 5px;
+  background-color: #e67e22;  /* orange */
+  margin: 10px 0;             /* space above and below */
+  border-radius: 5px;         /* smooth edges (optional) */
+}
+
+.intro-text h2 {
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+.intro-text p {
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.read-more{
+  color: #e67e22;
+  font-weight: bold;
+  display: inline-block;
+  text-align: right;   /* pushes text to right */
+  margin-top: 10px;   /* space from paragraph */
+  cursor: pointer;
+  text-decoration: none;
+  top: 549px;
+  left: 542px;
+}
+
+/* Right Image Box */
+.intro-image {
+  max-width: 40%;
+  text-align: center;
+}
+
+/* First image */
+.intro-image1 img {
+  width: 100%;
+  margin-top: 1cm;
+  margin-bottom: 1cm;   /*  adds 1cm gap below the first image */
+  border: none;         /*  removes any black border */
+  display: block;
+}
+
+/* Second image */
+.intro-image2 img {
+  width: 100%;
+  border: none;         /* removes any black border */
+  display: block;
+}
+
+/* Yellow Info Box */
+.info-box {
+  background: #FFFDA2;
+  height: 150px;
+  padding: 25px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.info-box .black-box {
+  width: 230px;
+  height: 160px;
+  background: #000;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+
+.info-box p {
+ margin-top: 1cm;
+  font-size: 15px;
+}
+
+/* Hidden text */
+.hidden {
+  display: none;
+}
+
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: -100%;
+    right: 100%;
+    width: 50%;
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    padding: 30px 0;
+    transition: left 0.3s ease;
+  }
+
+  .nav-links.active {
+    left: 0;
+  }
+
+  .hamburger {
+    display: block;
+    position: absolute;
+    left: 90%;
+    transform: translateX(-100%);
+  }
+
+  .register-btn {
+    position: relative;
+    left: 120px;
+    top: 5px;
+  }
+
+  .intro-text h1{
+    font-size: 23px;
+  color: #800000;
+  margin-bottom: 10px;
+
+  }
+   .intro-text h2{
+    font-size: 10px;
+    color: #e67e22;
+  margin-bottom: 15px;
+
+   }
+
+   .intro-text p {
+     font-size: 5px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+/* First image */
+.intro-image1 img {
+  width: 100%;
+  margin-top: 2cm;
+  margin-bottom: 0.5cm;   /*  adds 1cm gap below the first image */
+  border: none;         /*  removes any black border */
+  display: block;
+}
+
+
+.info-box{
+height: 90px;
+}
+
+.info-box .black-box {
+  width: 90px;
+  height: 90px;
+  background: #000;
+  border-radius: 4px;
+  flex-shrink: 0;
+}
+.info-box p {
+  display: inline;
+  margin-top: 11px;
+ font-size: 5px ;
+}
+}

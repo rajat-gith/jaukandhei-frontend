@@ -1,0 +1,124 @@
+.programs {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fffaf6; /* soft cream background */
+}
+
+.programs-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d35400; /* orange shade */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.programs-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d35400;
+  margin: 8px auto 0;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #fff;
+  height: 90px;
+  padding: 40px 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+  cursor: pointer;
+}
+
+.program-icon {
+  font-size: 40px;
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+.program-title {
+  font-size: 16px;
+  text-decoration: none;
+  font-weight: 600;
+  color: #e67e22;
+  text-transform: uppercase;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+
+  .programs {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fffaf6; /* soft cream background */
+}
+
+.programs-title {
+  font-size: 28px;
+  font-weight: bold;
+  color: #d35400; /* orange shade */
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.programs-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background: #d35400;
+  margin: 8px auto 0;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+  width: 900px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #fff;
+  padding: 40px 20px;
+  width: 200px;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.program-icon {
+  font-size: 40px;
+  color: #e67e22;
+  margin-bottom: 15px;
+}
+
+.program-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  text-transform: uppercase;
+}
+
+ 
+}
