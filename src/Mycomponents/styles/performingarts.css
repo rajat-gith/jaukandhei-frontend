@@ -1,14 +1,9 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+
 
 .performing-arts-container {
-    height: 95vh;
-    padding-top: 40px;
+    height: 100vh;
+    padding: 80px  80px 20px;
     background-color: #e7dfd5;
-    padding: 20px;
     overflow: hidden;
 }
 
@@ -131,7 +126,7 @@
 /* Tablet */
 @media (max-width: 1024px) {
     .performing-arts-container {
-        padding: 40px 15px;
+        padding: 80px 80px 15px;
     }
 
     .main-section {
@@ -146,7 +141,7 @@
 /* Mobile */
 @media (max-width: 768px) {
     .performing-arts-container {
-        padding: 40px 10px;
+        padding: 80px 10px;
 
         height: auto;
         min-height: 100vh;
@@ -205,6 +200,9 @@
 }
 
 @media (max-width: 480px) {
+    .performing-arts-container {
+        padding: 80px 10px;
+    }
     .gallery-section {
         height: 300px;
         max-height: 300px;
