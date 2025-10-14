@@ -1,0 +1,121 @@
+.stories-section {
+  background-color: #fff5ed;
+  text-align: center;
+  padding: 60px 0;
+}
+
+.stories-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #e56a24;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.underline {
+  width: 60px;
+  height: 4px;
+  background-color: #e56a24;
+  margin: 0 auto 40px;
+  border-radius: 2px;
+}
+
+.carousel-container {
+  background-color: #652d23;
+  padding: 40px 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-slider {
+  display: flex;
+  gap: 25px;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  padding: 10px;
+  width: 85%;
+}
+
+.karta-card {
+  flex: 0 0 auto;
+  width: 280px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.karta-card:hover {
+  transform: scale(1.03);
+}
+
+.cards-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.karta-card h2 {
+  margin: 12px 0 6px 0;
+  color: #e75480;
+}
+
+.karta-card p {
+  margin: 0 15px 10px;
+  font-size: 14px;
+  color: #555;
+}
+
+.karta-info {
+  background: #fff5f8;
+  padding: 10px;
+  border-top: 1px solid #eee;
+  font-size: 13px;
+}
+
+.arrow-btn {
+  background: none;
+  border: none;
+  color: #ffe291;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 5;
+}
+
+.arrow-btn:hover {
+  color: #fff;
+}
+
+.arrow-btn.left {
+  position: absolute;
+  left: 50px;
+}
+
+.arrow-btn.right {
+  position: absolute;
+  right: 50px;
+}
+
+.dots {
+  margin-top: 15px;
+}
+
+.dot {
+  height: 12px;
+  width: 12px;
+  background-color: #c4a077;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.dot.active {
+  background-color: #e56a24;
+  transform: scale(1.3);
+}

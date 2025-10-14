@@ -1,8 +1,9 @@
 import React from 'react';
-import { HashLink } from 'react-router-hash-link';
 import Body1 from '../Mycomponents/Body1';
 import Programs from '../Mycomponents/Programs';
 import Footer from '../Mycomponents/Footer';
+import Karta from '../Mycomponents/Karta';
+import Events from '../Mycomponents/Events';
 
 function HomePage() {
     return (
@@ -10,9 +11,12 @@ function HomePage() {
             <Body1 />
             {/* ✅ Our Programs section */}
             <Programs />
+            <Karta/>
+            <Events/>
             <Footer />
         </div>
     );
 }
 
 export default HomePage;
+ 
