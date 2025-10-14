@@ -1,8 +1,18 @@
 nav {
+    position: fixed; /* ensures it's above flow and always visible */
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     align-items: center;
-    background-color: #f5a002; /* Golden-orange background */
+    background-color: #f5a002;
     padding: 20px 30px;
+    z-index: 9999; /* increased to ensure topmost visibility */
+}
+
+.logo,
+.hamburger {
+    z-index: 10000; /* ensures they appear even above animated content */
 }
 
 /* Logo */
@@ -15,7 +25,6 @@ nav {
     /*background: #f5a002; /* same as navbar background */
     padding: 5px;
     z-index: 1000;
-
 }
 
 .logo img {

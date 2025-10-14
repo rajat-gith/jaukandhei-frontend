@@ -5,7 +5,6 @@ export default function SocialWork() {
     return (
         <div className="socialwork-container">
             <h1 className="socialwork-title">SOCIAL WORK</h1>
-            <div className="socialwork-line" />
 
             {/* Section 1 */}
             <div className="socialwork-section">

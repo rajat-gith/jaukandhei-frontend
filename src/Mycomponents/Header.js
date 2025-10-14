@@ -1,61 +1,69 @@
 import React, { useState } from 'react';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './styles/Navbar.css';
-import { Link } from 'react-router-dom';
 
-function Header() {
+function Header({ links }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState('Home');
+    const location = useLocation();
+    const navigate = useNavigate();
 
     const toggleMenu = () => setMenuOpen(!menuOpen);
 
     const handleLinkClick = (link) => {
-        setActiveLink(link);
-        setMenuOpen(false); // Close menu after clicking link
-    };
+        setActiveLink(link.name);
+        setMenuOpen(false);
 
-    const navLinks = [
-        { name: 'Home', path: '/' },
-        { name: 'About Us', path: '/about' },
-        { name: 'Our Work', path: '/' },
-        { name: 'Media Centers', path: '/media' },
-        { name: 'Contact Us', path: '/' },
-        { name: 'Shop', path: '/' },
-    ];
+        if (link.type === 'section') {
+            if (location.pathname !== link.path) {
+                navigate(link.path);
+                setTimeout(() => {
+                    const element = document.getElementById(link.sectionId);
+                    if (element) element.scrollIntoView({ behavior: 'smooth' });
+                }, 300); // wait for navigation
+            } else {
+                const element = document.getElementById(link.sectionId);
+                if (element) element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    };
 
     return (
         <div className="App">
             <nav>
-                {/* Logo */}
-                <Link to="/" className="nav-logo">
+                <Link to="/" className="nav-logo" onClick={() => setActiveLink('Home')}>
                     <div className="logo">
                         <img src="logo2.jpeg" alt="Logo" />
                     </div>
                 </Link>
 
-                {/* Hamburger */}
                 <div className="hamburger" onClick={toggleMenu}>
                     <i className={menuOpen ? 'ri-close-line' : 'ri-menu-line'}></i>
                 </div>
 
-                {/* Menu Links */}
                 <ul className={`nav-links ${menuOpen ? 'active' : ''}`}>
-                    {navLinks.map(({ name, path }) => (
-                        <li key={name}>
-                            <Link
-                                to={path}
-                                className={activeLink === name ? 'active' : ''}
-                                onClick={() => handleLinkClick(name)}
-                            >
-                                {name}
-                            </Link>
+                    {links.map((link) => (
+                        <li key={link.name}>
+                            {link.type === 'section' ? (
+                                <span
+                                    className={activeLink === link.name ? 'active' : ''}
+                                    onClick={() => handleLinkClick(link)}
+                                    style={{ cursor: 'pointer' }}
+                                >
+                                    {link.name}
+                                </span>
+                            ) : (
+                                <Link
+                                    to={link.path}
+                                    className={activeLink === link.name ? 'active' : ''}
+                                    onClick={() => handleLinkClick(link)}
+                                >
+                                    {link.name}
+                                </Link>
+                            )}
                         </li>
                     ))}
                 </ul>
-
-                {/* Register Button */}
-                {/* <div className="nav-action">
-                    <button className="register-btn">Register</button>
-                </div> */}
             </nav>
         </div>
     );

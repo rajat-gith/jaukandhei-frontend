@@ -13,9 +13,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 40px;
+    padding: 100px 20px;
     background: #fff;
-    flex-wrap: wrap; /* allow wrapping on smaller screens */
+    flex-wrap: wrap;
+    width: 100%; /* ensure it fits inside the viewport */
+    box-sizing: border-box; /* include padding in width */
 }
 
 /* LEFT CONTENT */
@@ -151,7 +153,7 @@ body {
 @media (max-width: 768px) {
     .intro-section {
         flex-direction: column;
-        padding: 20px;
+        padding: 70px 10px;
     }
 
     .intro-text {
@@ -198,6 +200,9 @@ body {
 
 /* Small phones */
 @media (max-width: 480px) {
+    .intro-section {
+        padding: 80px 20px;
+    }
     .intro-text h1 {
         font-size: 24px;
     }

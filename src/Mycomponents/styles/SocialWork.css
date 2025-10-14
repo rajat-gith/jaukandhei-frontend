@@ -1,29 +1,25 @@
 .socialwork-container {
     background-color: #f9f6ef;
-    padding: 60px 80px;
+    padding: 60px 6%;
     font-family: 'Poppins', sans-serif;
 }
 
+/* Title */
 .socialwork-title {
     text-align: center;
     color: #e15d1e;
     font-size: 2.8rem;
     font-weight: 700;
-
-    font-family: Instrument Sans;
+    font-family: 'Instrument Sans', sans-serif;
+    margin-bottom: 60px; /* Increased spacing since the line is removed */
 }
 
-.socialwork-line {
-    width: 650px;
-    border: 2px solid #e15d1e;
-    margin: 15px auto 60px;
-}
-
+/* Section Layout */
 .socialwork-section {
     display: flex;
     align-items: flex-start;
     gap: 40px;
-    margin-bottom: 60px;
+    margin-bottom: 80px;
     flex-wrap: wrap;
 }
 
@@ -31,25 +27,28 @@
     flex-direction: row-reverse;
 }
 
+/* Image Styling */
 .socialwork-img {
     width: 420px;
     height: 290px;
-    border-radius: 10px;
+    border-radius: 12px;
     box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
     object-fit: cover;
+    flex-shrink: 0;
 }
 
+/* Text Container */
 .socialwork-text-box {
     background-color: #fff8d9;
     padding: 25px 30px;
-    border-radius: 10px;
-    height: 240px;
+    border-radius: 12px;
     flex: 1;
+    min-width: 280px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
 }
 
 .socialwork-text-box h2 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #222;
     margin-bottom: 10px;
     font-weight: 600;
@@ -62,19 +61,92 @@
     margin-bottom: 10px;
 }
 
-@media (max-width: 900px) {
+/* Tablet View */
+@media (max-width: 1024px) {
+    .socialwork-container {
+        padding: 50px 5%;
+    }
+
+    .socialwork-title {
+        font-size: 2.3rem;
+        margin-bottom: 50px;
+    }
+
+    .socialwork-img {
+        width: 100%;
+        height: 280px;
+    }
+
+    .socialwork-section {
+        gap: 25px;
+        margin-bottom: 60px;
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .socialwork-container {
+        padding: 40px 5%;
+    }
+
     .socialwork-section {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 25px;
+        margin-bottom: 50px;
+    }
+
+    .socialwork-section.reverse {
+        flex-direction: column;
     }
 
     .socialwork-img {
         width: 100%;
         max-width: 400px;
-        margin: 0 auto;
+        height: auto;
     }
 
     .socialwork-text-box {
+        width: 100%;
+        padding: 20px;
         text-align: left;
+    }
+
+    .socialwork-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+
+    .socialwork-text-box h2 {
+        font-size: 1.3rem;
+    }
+
+    .socialwork-text-box p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+}
+
+/* Very Small Devices */
+@media (max-width: 480px) {
+    .socialwork-container {
+        padding: 30px 4%;
+    }
+
+    .socialwork-title {
+        font-size: 1.8rem;
+    }
+
+    .socialwork-text-box {
+        padding: 15px;
+    }
+
+    .socialwork-text-box h2 {
+        font-size: 1.2rem;
+    }
+
+    .socialwork-text-box p {
+        font-size: 0.9rem;
     }
 }

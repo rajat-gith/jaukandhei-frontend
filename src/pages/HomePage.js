@@ -11,12 +11,11 @@ function HomePage() {
             <Body1 />
             {/* ✅ Our Programs section */}
             <Programs />
-            <Karta/>
-            <Events/>
+            <Karta />
+            <Events />
             <Footer />
         </div>
     );
 }
 
 export default HomePage;
- 

@@ -8,9 +8,7 @@ export default function Aboutus() {
             <section className="hero-section">
                 <img src="headerimg.jpeg" alt="Jau Kandhei Bahaghara" className="hero-image" />
                 <div className="hero-text">
-                    <p>
-                        {/* Jau Kandhei Bahaghara The Doll Marriage of Odisha */}
-                    </p>
+                    <p>{/* Jau Kandhei Bahaghara The Doll Marriage of Odisha */}</p>
                 </div>
             </section>
 

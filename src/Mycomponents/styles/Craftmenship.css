@@ -1,69 +1,56 @@
+.craftsmanship-section {
+    background-color: #e7dfd5;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
 
-
+/* ===== Marquee Carousel ===== */
 .carousel-container {
     width: 100%;
     overflow: hidden;
-    /* padding: 40px 0; */
+    padding: 20px 0;
+}
+
+.marquee-wrapper {
+    width: 100%;
+    overflow: hidden;
+}
+
+.marquee-content {
+    display: flex;
+    gap: 8px;
+    animation: marqueeScroll 30s linear infinite;
+    width: fit-content;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
 }
 
 .carousel-slide {
-    padding: 0 10px;
-    box-sizing: border-box;
+    flex-shrink: 0;
 }
 
 .carousel-slide img {
-    width: 100%;
+    width: 450px;
     height: 280px;
     border-radius: 10px;
     object-fit: cover;
     display: block;
 }
 
-/* Override slick-slider basic styles */
-.slick-slider {
-    position: relative;
-    display: block;
-    box-sizing: border-box;
-    user-select: none;
-    touch-action: pan-y;
-    -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    position: relative;
-}
-
-.slick-track {
-    display: flex !important;
-    flex-direction: row;
-    align-items: center;
-    position: relative;
-    top: 0;
-    left: 0;
-}
-
-.slick-slide {
-    outline: none;
-    float: left;
-    height: auto;
-    min-height: 1px;
-}
-
-.slick-slide > div {
-    display: block;
-}
-
-.slick-slide img {
-    display: block;
-}
-
-/* Text content */
+/* ===== Text Content ===== */
 .performing-arts-content {
     max-width: 900px;
-    margin: 40px auto;
+    margin: 50px auto;
     padding: 0 20px;
     text-align: justify;
     color: #333;
@@ -90,19 +77,26 @@
     line-height: 1.8;
 }
 
-/* Responsive */
+/* ===== Responsive Breakpoints ===== */
+
+/* Large Screens (1024px ↓) */
 @media (max-width: 1024px) {
     .carousel-slide img {
+        width: 380px;
         height: 240px;
+    }
+
+    .marquee-content {
+        animation-duration: 25s;
     }
 
     .performing-arts-content {
         max-width: 800px;
-        padding: 0 30px;
+        padding: 0 25px;
     }
 
     .performing-arts-content h1 {
-        font-size: 32px;
+        font-size: 34px;
     }
 
     .performing-arts-content p {
@@ -110,22 +104,30 @@
     }
 }
 
+/* Tablets (768px ↓) */
 @media (max-width: 768px) {
-    .carousel-container {
-        padding: 30px 0;
+    .craftsmanship-section {
+        min-height: auto;
+        padding-top: 40px;
     }
 
-    .carousel-slide {
-        padding: 0 8px;
+    .carousel-container {
+        padding: 20px 0;
     }
 
     .carousel-slide img {
+        width: 320px;
         height: 200px;
+    }
+
+    .marquee-content {
+        gap: 6px;
+        animation-duration: 20s;
     }
 
     .performing-arts-content {
         margin: 30px auto;
-        padding: 0 20px;
+        padding: 0 18px;
     }
 
     .performing-arts-content h1 {
@@ -143,27 +145,30 @@
     }
 }
 
+/* Mobile (480px ↓) */
 @media (max-width: 480px) {
-    .performing-arts-section {
-        padding-bottom: 30px;
+    .craftsmanship-section {
+        padding: 30px 0;
     }
 
     .carousel-container {
-        padding: 20px 0;
-    }
-
-    .carousel-slide {
-        padding: 0 5px;
+        padding: 10px 0;
     }
 
     .carousel-slide img {
-        height: 180px;
+        width: 280px;
+        height: 160px;
         border-radius: 8px;
+    }
+
+    .marquee-content {
+        gap: 4px;
+        animation-duration: 18s;
     }
 
     .performing-arts-content {
         margin: 20px auto;
-        padding: 0 15px;
+        padding: 0 12px;
     }
 
     .performing-arts-content h1 {
@@ -173,12 +178,32 @@
     .underline {
         width: 60px;
         height: 2px;
-        margin-bottom: 15px;
+        margin-bottom: 12px;
     }
 
     .performing-arts-content p {
         font-size: 14px;
         line-height: 1.6;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Extra Small Devices (360px ↓) */
+@media (max-width: 360px) {
+    .carousel-slide img {
+        width: 240px;
+        height: 140px;
+    }
+
+    .marquee-content {
+        animation-duration: 15s;
+    }
+
+    .performing-arts-content h1 {
+        font-size: 22px;
+    }
+
+    .performing-arts-content p {
+        font-size: 13px;
     }
 }
