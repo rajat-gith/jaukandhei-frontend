@@ -1,0 +1,248 @@
+.footer {
+    position: relative;
+    width: 100%;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    overflow: hidden;
+
+    background: url('https://gcdnb.pbrd.co/images/7vw01JZ2RX50.png?o=1') no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+/* Overlay tint for readability */
+.footer-overlay {
+    background-color: rgba(60, 0, 0, 0.8);
+    padding: 70px 80px;
+    width: 100%;
+}
+
+/* === Main content layout === */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 60px;
+    margin-bottom: 50px;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    color: #f8f87c;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* === Member Section === */
+.member-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.member-form input {
+    border: none;
+    outline: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.member-form button {
+    background-color: #00b36b;
+    border: none;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 600;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+.member-form button:hover {
+    background-color: #009e5e;
+    transform: translateY(-2px);
+}
+
+.support-btn {
+    background-color: #d4522b;
+    border: none;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.support-btn:hover {
+    background-color: #bf3e1b;
+    transform: translateY(-2px);
+}
+
+/* === Quick Links === */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    margin: 10px 0;
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    text-transform: capitalize;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    width: fit-content;
+    transition: all 0.3s ease;
+}
+
+/* Hover underline animation */
+.quick-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.quick-links li {
+    position: relative;
+    margin: 10px 0;
+    width: fit-content;
+}
+
+/* The anchor (<Link>) and span styling */
+.quick-links a,
+.quick-links .footer-link-btn {
+    font-size: 1.05rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+}
+
+/* Underline animation */
+.quick-links a::after,
+.quick-links .footer-link-btn::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0%;
+    height: 2px;
+    background-color: #f8f87c;
+    transition: width 0.3s ease;
+}
+
+/* Hover effects for both link and span */
+.quick-links a:hover,
+.quick-links .footer-link-btn:hover {
+    color: #f8f87c;
+    transform: translateX(4px);
+}
+
+.quick-links a:hover::after,
+.quick-links .footer-link-btn:hover::after {
+    width: 100%;
+}
+
+/* === Contact Section === */
+.contact-section ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-section li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.contact-section li span {
+    margin-right: 10px;
+    font-size: 1.2rem;
+    color: #f8f87c;
+}
+
+/* === Footer Bottom === */
+.footer-bottom {
+    background-color: #f8f87c;
+    color: #000;
+    text-align: center;
+    padding: 15px 30px;
+    border-radius: 30px 30px 0 0;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* ------------------- */
+/* Responsive Behavior */
+/* ------------------- */
+
+/* Tablet */
+@media (max-width: 992px) {
+    .footer-overlay {
+        padding: 50px 60px;
+    }
+
+    .footer-content {
+        gap: 40px;
+    }
+
+    .footer-section h2 {
+        font-size: 1.6rem;
+    }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .footer-overlay {
+        padding: 40px 25px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 40px;
+    }
+
+    .footer-section {
+        width: 100%;
+    }
+
+    .footer-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .quick-links li {
+        font-size: 1rem;
+    }
+
+    .footer-bottom {
+        font-size: 0.9rem;
+        border-radius: 20px 20px 0 0;
+    }
+}

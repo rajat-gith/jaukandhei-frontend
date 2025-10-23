@@ -13,15 +13,18 @@ export default function PerformingArts() {
     ];
 
     return (
-        <div className="craftsmanship-section">
-            <div className="carousel-container">
-                <div className="marquee-wrapper">
-                    <div className="marquee-content">
-                        {images.concat(images).map((img, idx) => (
-                            <div key={idx} className="carousel-slide">
-                                <img src={img} alt={`Craft ${idx}`} />
-                            </div>
-                        ))}
+        <section className="craftsmanship-section">
+            <div className="hero-carousel">
+                <div className="carousel-overlay"></div>
+                <div className="carousel-container">
+                    <div className="marquee-wrapper">
+                        <div className="marquee-content">
+                            {images.concat(images).map((img, idx) => (
+                                <div key={idx} className="carousel-slide">
+                                    <img src={img} alt={`Craft ${idx}`} />
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
@@ -30,30 +33,16 @@ export default function PerformingArts() {
                 <h1>CRAFTMANSHIP</h1>
                 <div className="underline"></div>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate
                     ipsa iure perferendis similique. Labore provident nisi architecto corrupti illo
-                    nesciunt debitis amet, quam cum rerum obcaecati! Possimus, ipsa eveniet? Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Aliquid nemo eligendi
-                    consectetur, tempore rerum perferendis quae nobis quibusdam doloremque eos eius
-                    architecto libero aliquam autem. Animi neque non labore expedita!
+                    nesciunt debitis amet, quam cum rerum obcaecati! Possimus, ipsa eveniet?
                 </p>
                 <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate
-                    ipsa iure perferendis similique. Labore provident nisi architecto corrupti illo
-                    nesciunt debitis amet, quam cum rerum obcaecati! Possimus, ipsa eveniet? Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Aliquid nemo eligendi
-                    consectetur, tempore rerum perferendis quae nobis quibusdam doloremque eos eius
-                    architecto libero aliquam autem. Animi neque non labore expedita!
-                </p>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Recusandae voluptate
-                    ipsa iure perferendis similique. Labore provident nisi architecto corrupti illo
-                    nesciunt debitis amet, quam cum rerum obcaecati! Possimus, ipsa eveniet? Lorem
-                    ipsum dolor sit amet consectetur adipisicing elit. Aliquid nemo eligendi
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nemo eligendi
                     consectetur, tempore rerum perferendis quae nobis quibusdam doloremque eos eius
                     architecto libero aliquam autem. Animi neque non labore expedita!
                 </p>
             </div>
-        </div>
+        </section>
     );
 }

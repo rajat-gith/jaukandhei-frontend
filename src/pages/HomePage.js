@@ -9,7 +9,6 @@ function HomePage() {
     return (
         <div className="HomePage">
             <Body1 />
-            {/* ✅ Our Programs section */}
             <Programs />
             <Karta />
             <Events />

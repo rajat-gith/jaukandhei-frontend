@@ -1,10 +1,11 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './styles/Navbar.css';
 
 function Header({ links }) {
     const [menuOpen, setMenuOpen] = useState(false);
     const [activeLink, setActiveLink] = useState('Home');
+    const [isTransparent, setIsTransparent] = useState(false);
     const location = useLocation();
     const navigate = useNavigate();
 
@@ -20,7 +21,7 @@ function Header({ links }) {
                 setTimeout(() => {
                     const element = document.getElementById(link.sectionId);
                     if (element) element.scrollIntoView({ behavior: 'smooth' });
-                }, 300); // wait for navigation
+                }, 300);
             } else {
                 const element = document.getElementById(link.sectionId);
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
@@ -28,9 +29,20 @@ function Header({ links }) {
         }
     };
 
+    // 👇 detect scroll
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 60) setIsTransparent(true);
+            else setIsTransparent(false);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
+
     return (
         <div className="App">
-            <nav>
+            <nav className={`navbar ${isTransparent ? 'transparent' : ''}`}>
                 <Link to="/" className="nav-logo" onClick={() => setActiveLink('Home')}>
                     <div className="logo">
                         <img src="logo2.jpeg" alt="Logo" />

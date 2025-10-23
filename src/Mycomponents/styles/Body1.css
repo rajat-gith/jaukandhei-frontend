@@ -13,8 +13,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 100px 20px;
+    padding: 0px 10px 0px 10px;
     background: #fff;
+    padding-top: 100px;
     flex-wrap: wrap;
     width: 100%; /* ensure it fits inside the viewport */
     box-sizing: border-box; /* include padding in width */
@@ -153,7 +154,7 @@ body {
 @media (max-width: 768px) {
     .intro-section {
         flex-direction: column;
-        padding: 70px 10px;
+        padding: 80px 10px 0px 10px;
     }
 
     .intro-text {
@@ -201,7 +202,7 @@ body {
 /* Small phones */
 @media (max-width: 480px) {
     .intro-section {
-        padding: 80px 20px;
+        padding: 80px 10px 0px 10px;
     }
     .intro-text h1 {
         font-size: 24px;
