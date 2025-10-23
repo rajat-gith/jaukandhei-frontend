@@ -15,8 +15,8 @@ export default function Programs() {
     const programs = [
         { icon: <FaTools />, title: 'REVIVING CRAFTMANSHIP', link: '/craftmenship' },
         { icon: <FaHandsHelping />, title: 'JOINING COMMUNITIES', link: '/communities' },
-        { icon: <FaBullhorn />, title: 'EVENTS', link: '/awareness' },
-        { icon: <FaHeartbeat />, title: 'HEALTHCARE', link: '/healthcare' },
+        // { icon: <FaBullhorn />, title: 'EVENTS', link: '/awareness' },
+        // { icon: <FaHeartbeat />, title: 'HEALTHCARE', link: '/healthcare' },
         { icon: <FaUsers />, title: 'SOCIAL WORKS', link: '/socialwork' },
         { icon: <FaTheaterMasks />, title: 'REVIVING PERFORMING ARTS', link: '/performingarts' },
     ];

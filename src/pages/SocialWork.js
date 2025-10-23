@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Mycomponents/styles/SocialWork.css';
 
 export default function SocialWork() {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className="socialwork-container">
             <h1 className="socialwork-title">SOCIAL WORK</h1>
