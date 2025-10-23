@@ -55,7 +55,7 @@
 }
 
 .event-card img {
-    width: 100%;
+    width: 300px;
     height: 300px;
     object-fit: cover; /* ensures proper aspect ratio */
     display: block;
@@ -64,6 +64,7 @@
         transform 0.4s ease,
         filter 0.4s ease;
     will-change: transform;
+    
 }
 
 /* ==========================
