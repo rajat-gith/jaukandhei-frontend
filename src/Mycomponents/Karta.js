@@ -150,7 +150,7 @@ export default function Karta() {
 
     return (
         <section className="stories-section">
-            <h2 className="stories-title">Karta</h2>
+            <h2 className="stories-title">KARTA</h2>
             <div className="underline"></div>
 
             <div className="carousel-container">

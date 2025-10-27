@@ -57,9 +57,10 @@
 .event-card img {
     width: 300px;
     height: 300px;
-    object-fit: cover; /* ensures proper aspect ratio */
+    object-fit: contain cover; /* ensures proper aspect ratio */
     display: block;
     border-radius: 15px;
+
     transition:
         transform 0.4s ease,
         filter 0.4s ease;

@@ -29,7 +29,7 @@ export default function Footer() {
                 <div className="footer-content">
                     {/* === Become a Member Section === */}
                     <div className="footer-section member-section">
-                        <h2>Become a Member</h2>
+                        <h2>Subscribe for Newsletter</h2>
                         <form className="member-form" onSubmit={(e) => e.preventDefault()}>
                             <input type="text" placeholder="Full Name" />
                             <input type="text" placeholder="Mobile No." />

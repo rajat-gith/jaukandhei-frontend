@@ -11,6 +11,7 @@ import Craftmenship from './pages/Craftmenship';
 import SocialWork from './pages/SocialWork';
 import community from './pages/community';
 import Shop from './pages/Shop';
+import ScrollToTop from './Mycomponents/styles/ScrollToTop';
 
 function App() {
     const navLinks = [
@@ -25,6 +26,7 @@ function App() {
     return (
         <div className="App">
             <BrowserRouter>
+                <ScrollToTop />
                 <Header links={navLinks} />
                 <Routes>
                     <Route path="/" Component={HomePage} />
