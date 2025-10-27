@@ -14,7 +14,7 @@ export default function Body1() {
                         Bahaghara
                     </h1>
                     <div className="orange-line"></div>
-                    <h2>Celebrating Tradition</h2>
+                    <span className='intro-title'>Celebrating Tradition</span>
                     <p id="short-text">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -22,12 +22,11 @@ export default function Body1() {
                         consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                         cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
                         non proident, sunt in culpa qui officia des. Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et{' '}
+                        <Link to="/about" className="read-more" id="read-more-link">
+                            Read more &gt;
+                        </Link>
                     </p>
-
-                    <Link to='/about' className="read-more" id="read-more-link">
-                        Read more &gt;
-                    </Link>
                 </div>
 
                 {/* Right Image */}
@@ -40,8 +39,6 @@ export default function Body1() {
                     </div>
                 </div>
             </section>
-
-            
         </div>
     );
 }

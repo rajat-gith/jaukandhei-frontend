@@ -44,9 +44,15 @@ body {
     border-radius: 5px;
 }
 
-.intro-text h2 {
+/* UPDATED SPAN STYLE */
+.intro-text span {
+    display: inline-block;
     color: #e67e22;
     margin-bottom: 15px;
+    font-size: 2rem; /* Base size */
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
 }
 
 .intro-text p {
@@ -131,8 +137,8 @@ body {
         font-size: 48px;
     }
 
-    .intro-text h2 {
-        font-size: 20px;
+    .intro-text span {
+        font-size: 1.6rem; /* Adjusted for medium screens */
     }
 
     .intro-text p {
@@ -170,6 +176,11 @@ body {
         font-size: 18px;
     }
 
+    .intro-text span {
+        font-size: 1.3rem; /* Tablet-friendly */
+        margin-bottom: 10px;
+    }
+
     .intro-text p {
         font-size: 13px;
     }
@@ -204,12 +215,19 @@ body {
     .intro-section {
         padding: 80px 10px 0px 10px;
     }
+
     .intro-text h1 {
         font-size: 24px;
     }
 
     .intro-text h2 {
         font-size: 16px;
+    }
+
+    .intro-text span {
+        font-size: 1rem; /* Smaller phones */
+        margin-bottom: 8px;
+        letter-spacing: 0.3px;
     }
 
     .intro-text p {
