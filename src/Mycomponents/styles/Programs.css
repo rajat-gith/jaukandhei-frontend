@@ -5,14 +5,15 @@
     text-align: center;
     padding: 80px 20px;
     background: #fffaf6; /* soft cream background */
+    font-family: 'Instrument Sans', sans-serif;
 }
 
 .programs-title {
-    font-size: 28px;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
-    color: #d35400; /* orange shade */
-    margin-bottom: 50px;
-    position: relative;
+    color: #ff6600;
+    margin-bottom: 15px;
 }
 
 .programs-title::after {
@@ -30,7 +31,7 @@
    ========================== */
 .programs-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 30px;
     max-width: 1400px;
     margin: 0 auto;
@@ -66,7 +67,7 @@
 }
 
 .program-icon {
-    font-size: 38px;
+    font-size: clamp(28px, 3vw, 42px);
     color: #e67e22;
     margin-bottom: 15px;
     transition: color 0.3s ease;
@@ -77,7 +78,7 @@
 }
 
 .program-title {
-    font-size: 16px;
+    font-size: clamp(13px, 1.2vw, 18px);
     font-weight: 600;
     color: #e67e22;
     text-transform: uppercase;
@@ -88,39 +89,30 @@
    RESPONSIVE STYLING
    ========================== */
 
-/* Large tablets */
+/* Large tablets and below */
 @media (max-width: 1024px) {
-    .programs-title {
-        font-size: 26px;
+    .programs {
+        padding: 70px 25px;
     }
 
     .programs-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        padding: 0 30px;
+        gap: 25px;
+        padding: 0 25px;
     }
 
     .program-card {
-        padding: 25px 18px;
-    }
-
-    .program-icon {
-        font-size: 38px;
-    }
-
-    .program-title {
-        font-size: 15px;
+        padding: 22px 15px;
     }
 }
 
-/* Tablets and large phones */
+/* Tablets and medium phones */
 @media (max-width: 768px) {
     .programs {
-        padding: 60px 15px;
+        padding: 60px 20px;
     }
 
     .programs-title {
-        font-size: 24px;
+        font-size: clamp(1.8rem, 4vw, 2.2rem);
     }
 
     .programs-grid {
@@ -132,24 +124,16 @@
     .program-card {
         padding: 20px 15px;
     }
-
-    .program-icon {
-        font-size: 34px;
-    }
-
-    .program-title {
-        font-size: 14px;
-    }
 }
 
 /* Small phones */
 @media (max-width: 480px) {
     .programs {
-        padding: 45px 10px;
+        padding: 45px 15px;
     }
 
     .programs-title {
-        font-size: 22px;
+        font-size: clamp(1.5rem, 6vw, 2rem);
     }
 
     .programs-grid {
@@ -160,13 +144,5 @@
 
     .program-card {
         padding: 18px 12px;
-    }
-
-    .program-icon {
-        font-size: 30px;
-    }
-
-    .program-title {
-        font-size: 13px;
     }
 }
