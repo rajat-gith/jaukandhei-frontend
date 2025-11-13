@@ -5,6 +5,7 @@ import Footer from '../Mycomponents/Footer';
 import Karta from '../Mycomponents/Karta';
 import Events from '../Mycomponents/Events';
 import Info from '../Mycomponents/Info';
+import Shop from '../Mycomponents/Shop';
 
 function HomePage() {
     return (
@@ -14,6 +15,7 @@ function HomePage() {
             <Programs />
             <Karta />
             <Events />
+            <Shop/>
             <Footer />
         </div>
     );

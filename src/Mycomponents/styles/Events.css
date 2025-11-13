@@ -10,7 +10,7 @@
 
 .events-title {
     color: #ff6600;
-    font-size: 2rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     margin-bottom: 40px;
     position: relative;

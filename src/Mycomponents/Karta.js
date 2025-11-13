@@ -43,6 +43,46 @@ const cards = [
             'https://youmeandtrends.com/wp-content/uploads/2018/03/most-beautiful-flower-wallpaper-world-colourful-4-desktop-worlds-top-beautiful-flowers-images-photos-with-most-flower-wallpaper-world-colourful-high-quality-for-computer-colorful-latest.jpg',
         ],
     },
+    {
+        id: 1,
+        name: 'Exotic Blossom',
+        description: 'A rare and vibrant flower that adds elegance to any garden.',
+        startDate: '2025-01-10',
+        endDate: '2025-12-31',
+        location: 'Bhubaneswar, Odisha',
+        imgs: ['https://tse4.mm.bing.net/th/id/OIP.RG58DaO7kXIPA2oTSLS6kAHaE8?pid=Api&P=0&h=180'],
+    },
+    {
+        id: 2,
+        name: 'Sunrise Garden',
+        description: 'A peaceful garden filled with sunshine and serenity.',
+        startDate: '2025-02-15',
+        endDate: '2025-08-15',
+        location: 'Puri, Odisha',
+        imgs: ['https://wallpaperaccess.com/full/1238364.jpg'],
+    },
+    {
+        id: 3,
+        name: 'Petal Paradise',
+        description: 'An enchanting display of colorful flowers from around the world.',
+        startDate: '2025-03-01',
+        endDate: '2025-10-01',
+        location: 'Cuttack, Odisha',
+        imgs: [
+            'https://webneel.com/wallpaper/sites/default/files/images/01-2014/2-flower-wallpaper.jpg',
+        ],
+    },
+    {
+        id: 4,
+        name: 'Blooming Beauty',
+        description: "The perfect blend of nature's charm and vibrant energy.",
+        startDate: '2025-04-10',
+        endDate: '2025-09-20',
+        location: 'Rourkela, Odisha',
+        imgs: [
+            'https://youmeandtrends.com/wp-content/uploads/2018/03/most-beautiful-flower-wallpaper-world-colourful-4-desktop-worlds-top-beautiful-flowers-images-photos-with-most-flower-wallpaper-world-colourful-high-quality-for-computer-colorful-latest.jpg',
+        ],
+    },
 ];
 
 const KartaCard = ({ card }) => (
@@ -74,8 +114,8 @@ export default function Karta() {
     const [isMobile, setIsMobile] = useState(false);
     const sliderRef = useRef(null);
 
-    const cardsPerSlide = [4, 4, 4, 2];
-    const totalSlides = cardsPerSlide.length;
+    const CARDS_PER_VIEW = 4; // Number of cards visible at once on desktop
+    const totalSlides = Math.ceil(cards.length / CARDS_PER_VIEW);
 
     useEffect(() => {
         const handleResize = () => {
@@ -94,33 +134,20 @@ export default function Karta() {
         const handleScroll = () => {
             const cardWidth = slider.children[0].offsetWidth + 25;
             const scrollLeft = slider.scrollLeft;
+            const slideWidth = cardWidth * CARDS_PER_VIEW;
 
             // Calculate which slide we're on based on scroll position
-            let cumulativeCards = 0;
-            let detectedSlide = 0;
-
-            for (let i = 0; i < cardsPerSlide.length; i++) {
-                const slideStart = cumulativeCards * cardWidth;
-                const slideEnd = (cumulativeCards + cardsPerSlide[i]) * cardWidth;
-
-                if (scrollLeft >= slideStart && scrollLeft < slideEnd) {
-                    detectedSlide = i;
-                    break;
-                }
-
-                cumulativeCards += cardsPerSlide[i];
-            }
-
-            setCurrentSlide(detectedSlide);
+            const detectedSlide = Math.round(scrollLeft / slideWidth);
+            setCurrentSlide(Math.min(detectedSlide, totalSlides - 1));
         };
 
         slider.addEventListener('scroll', handleScroll);
         return () => slider.removeEventListener('scroll', handleScroll);
-    }, [isMobile, cardsPerSlide]);
+    }, [isMobile, totalSlides]);
 
     const scrollToSlide = (index) => {
         const cardWidth = sliderRef.current.children[0].offsetWidth + 25;
-        const offset = cardsPerSlide.slice(0, index).reduce((a, b) => a + b, 0) * cardWidth;
+        const offset = index * CARDS_PER_VIEW * cardWidth;
         sliderRef.current.scrollTo({ left: offset, behavior: 'smooth' });
     };
 
@@ -169,7 +196,7 @@ export default function Karta() {
                 </button>
             </div>
 
-            {!isMobile && (
+            {!isMobile && totalSlides > 1 && (
                 <div className="dots">
                     {Array.from({ length: totalSlides }).map((_, index) => (
                         <span

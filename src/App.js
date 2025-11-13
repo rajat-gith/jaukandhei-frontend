@@ -10,7 +10,7 @@ import performingarts from './pages/performingarts';
 import Craftmenship from './pages/Craftmenship';
 import SocialWork from './pages/SocialWork';
 import community from './pages/community';
-import Shop from './pages/Shop';
+import Shop from './Mycomponents/Shop';
 import ScrollToTop from './Mycomponents/styles/ScrollToTop';
 
 function App() {
@@ -20,7 +20,7 @@ function App() {
         { name: 'Our Work', path: '/', type: 'section', sectionId: 'programs' },
         { name: 'Events', path: '/', type: 'section', sectionId: 'events' },
         { name: 'Media', path: '/media', type: 'route' },
-        { name: 'Shop', path: '/shop', type: 'route' },
+        { name: 'Shop', path: '/', type: 'section', sectionId: 'shops' },
     ];
 
     return (

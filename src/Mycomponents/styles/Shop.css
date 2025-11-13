@@ -1,0 +1,199 @@
+/* Shop Section */
+.shops-section {
+    background-color: #fdf8f1;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #e94e1b;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Titles */
+.shops-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    font-weight: 700;
+    margin-bottom: 2rem;
+    letter-spacing: 2px;
+}
+
+.partners-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+
+.underline {
+    width: 80px;
+    height: 4px;
+    background-color: #e94e1b;
+    margin: 0.5rem auto;
+    border-radius: 3px;
+}
+
+/* Auto-Scrolling Shop Images */
+.shops-scroll {
+    display: flex;
+    overflow: hidden;
+    gap: 1.5rem;
+    padding: 1rem 0;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.shop-card {
+    flex: 0 0 auto;
+    width: 280px;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(233, 78, 27, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.shop-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(233, 78, 27, 0.25);
+}
+
+.shop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.shop-card:hover .shop-image {
+    transform: scale(1.05);
+}
+
+/* Buy Now Button */
+.buy-now-btn {
+    background: #e94e1b;
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 2rem;
+    padding: 0.8rem 2.5rem;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 78, 27, 0.3);
+    letter-spacing: 1px;
+}
+
+.buy-now-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 78, 27, 0.4);
+}
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.3s ease;
+}
+
+.modal-content {
+    background: linear-gradient(135deg, #fffaf5 0%, #fdf8f1 100%);
+    padding: 2rem;
+    border-radius: 16px;
+    width: 90%;
+    max-width: 400px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+    border: 2px solid #e94e1b;
+    animation: slideUp 0.3s ease;
+}
+
+.modal-title {
+    color: #e94e1b;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: 1px;
+}
+
+.modal-text {
+    color: #333;
+    font-size: 1rem;
+    margin: 0.8rem 0;
+    text-align: left;
+}
+
+.close-btn {
+    margin-top: 1.5rem;
+    background: #e94e1b;
+    color: white;
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(233, 78, 27, 0.3);
+}
+
+.close-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(233, 78, 27, 0.4);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .shop-card {
+        width: 200px;
+        height: 150px;
+    }
+
+    .shops-title,
+    .partners-title {
+        font-size: 1.5rem;
+    }
+
+    .buy-now-btn {
+        font-size: 1rem;
+        padding: 0.7rem 2rem;
+    }
+
+    .modal-content {
+        padding: 1.5rem;
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+    }
+}
