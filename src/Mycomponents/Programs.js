@@ -5,8 +5,6 @@ import { Link } from 'react-router-dom';
 import {
     FaTools,
     FaUsers,
-    FaBullhorn,
-    FaHeartbeat,
     FaHandsHelping,
     FaTheaterMasks,
 } from 'react-icons/fa';

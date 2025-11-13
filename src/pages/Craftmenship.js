@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../Mycomponents/styles/Craftmenship.css';
 
 export default function PerformingArts() {
@@ -15,6 +15,10 @@ export default function PerformingArts() {
         '/shop/craft11.jpg',
         '/shop/craft12.jpg',
     ];
+
+    useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }, []);
 
     return (
         <section className="craftsmanship-section">
