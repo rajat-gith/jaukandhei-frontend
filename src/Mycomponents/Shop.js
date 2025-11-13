@@ -44,7 +44,7 @@ export default function Shop() {
 
     return (
         <section className="shops-section" id="shops">
-            <h2 className="shops-title">STORES</h2>
+            <span className="shops-title">STORES</span>
             <div className="underline"></div>
 
             <div className="shops-scroll" ref={scrollRef}>
