@@ -64,14 +64,7 @@ nav:not(.transparent) {
     position: relative;
 }
 
-.nav-links a {
-    text-decoration: none;
-    font-family: instrument sans;
-    color: #000; /* Black menu text */
-    font-weight: 600;
-    padding: 5px 0;
-    transition: color 0.3s ease;
-}
+.nav-links a,
 .nav-links span {
     text-decoration: none;
     font-family: instrument sans;
@@ -79,10 +72,12 @@ nav:not(.transparent) {
     font-weight: 600;
     padding: 5px 0;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
-/* Hover underline effect */
-.nav-links a::after {
+/* Hover underline effect for both links and spans */
+.nav-links a::after,
+.nav-links span::after {
     content: '';
     position: absolute;
     left: 0;
@@ -94,7 +89,9 @@ nav:not(.transparent) {
 }
 
 .nav-links a:hover::after,
-.nav-links a.active::after {
+.nav-links a.active::after,
+.nav-links span:hover::after,
+.nav-links span.active::after {
     width: 100%;
 }
 

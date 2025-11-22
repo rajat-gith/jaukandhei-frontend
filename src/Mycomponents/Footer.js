@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../Mycomponents/styles/Footer.css';
 import { Link } from 'react-router-dom';
 
@@ -13,6 +13,8 @@ const navLinks = [
 ];
 
 export default function Footer() {
+    const [showModal, setShowModal] = useState(false);
+
     const handleSectionScroll = (sectionId) => {
         const section = document.getElementById(sectionId);
         if (section) {
@@ -28,7 +30,7 @@ export default function Footer() {
             <div className="footer-overlay">
                 <div className="footer-content">
                     {/* === Become a Member Section === */}
-                    <div className="footer-section member-section">
+                    {/* <div className="footer-section member-section">
                         <h2>Subscribe for Newsletter</h2>
                         <form className="member-form" onSubmit={(e) => e.preventDefault()}>
                             <input type="text" placeholder="Full Name" />
@@ -37,7 +39,36 @@ export default function Footer() {
                             <button type="submit">SUBMIT</button>
                         </form>
                         <button className="support-btn">Support Us</button>
+                    </div> */}
+                    {/* === Donation Form Section === */}
+                    {/* === Donation Button Section === */}
+                    <div className="footer-section donation-section">
+                        <h2>Support Us — Donate</h2>
+                        <button className="support-btn" onClick={() => setShowModal(true)}>
+                            Donate Now
+                        </button>
                     </div>
+
+                    {/* === Donation Modal === */}
+                    {showModal && (
+                        <div className="donation-modal-overlay" onClick={() => setShowModal(false)}>
+                            <div className="donation-modal" onClick={(e) => e.stopPropagation()}>
+                                <button className="close-btn" onClick={() => setShowModal(false)}>
+                                    ✖
+                                </button>
+                                <iframe
+                                    src="https://docs.google.com/forms/d/e/1FAIpQLSd0tGYPK5naFfp5CLDv1CVnAL_KWxrJ8hcsu5TMg5IGMxLTFQ/viewform?embedded=true"
+                                    width="640"
+                                    height="640"
+                                    frameborder="0"
+                                    marginheight="0"
+                                    marginwidth="0"
+                                >
+                                    Loading…
+                                </iframe>
+                            </div>
+                        </div>
+                    )}
 
                     {/* === Quick Links Section === */}
                     <div className="footer-section quick-links">
@@ -47,7 +78,6 @@ export default function Footer() {
                                 <li key={index}>
                                     {link.type === 'route' ? (
                                         <Link to={link.path}>
-                
                                             <span>{link.name}</span>
                                         </Link>
                                     ) : (
@@ -67,7 +97,6 @@ export default function Footer() {
                             </li>
                         </ul>
                     </div>
-
                     {/* === Contact Section === */}
                     <div className="footer-section contact-section">
                         <h2>Contact Us</h2>

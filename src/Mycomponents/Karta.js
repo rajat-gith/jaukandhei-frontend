@@ -5,86 +5,140 @@ import { FaChevronLeft, FaChevronRight, FaCalendar, FaMapMarkerAlt } from 'react
 const cards = [
     {
         id: 1,
-        name: 'Exotic Blossom',
-        description: 'A rare and vibrant flower that adds elegance to any garden.',
-        startDate: '2025-01-10',
-        endDate: '2025-12-31',
+        name: 'Jayanta weds Usha',
+        description:
+            'Barakarta: Rabindra Jena and Subasini Jena. Kanyakarta: Bhagaban Mohini and Parivar.',
+        tenure: '2011',
+        endDate: '',
         location: 'Bhubaneswar, Odisha',
-        imgs: ['https://tse4.mm.bing.net/th/id/OIP.RG58DaO7kXIPA2oTSLS6kAHaE8?pid=Api&P=0&h=180'],
+        imgs: ['/kartas/2011.jpg'],
     },
     {
         id: 2,
-        name: 'Sunrise Garden',
-        description: 'A peaceful garden filled with sunshine and serenity.',
-        startDate: '2025-02-15',
-        endDate: '2025-08-15',
+        name: 'Abhimanyu weds Akansha',
+        description:
+            'Barakarta: Upendra Patra and Kanchanabala Patra. Kanyakarta: Kaylashchandra Behera and Labanyabati Behera.',
+        tenure: '2012',
+        endDate: '',
         location: 'Puri, Odisha',
-        imgs: ['https://wallpaperaccess.com/full/1238364.jpg'],
+        imgs: ['/kartas/2012.jpg'],
     },
     {
         id: 3,
-        name: 'Petal Paradise',
-        description: 'An enchanting display of colorful flowers from around the world.',
-        startDate: '2025-03-01',
-        endDate: '2025-10-01',
+        name: 'Achyuta weds Malika',
+        description: 'Barakarta: Dr.Rabinarayan Dash. Kanyakarta: Madhusudan Das and Sanjukta Das.',
+        tenure: '2013',
+        endDate: '',
         location: 'Cuttack, Odisha',
-        imgs: [
-            'https://webneel.com/wallpaper/sites/default/files/images/01-2014/2-flower-wallpaper.jpg',
-        ],
+        imgs: ['/kartas/2013.jpg'],
     },
     {
         id: 4,
-        name: 'Blooming Beauty',
-        description: "The perfect blend of nature's charm and vibrant energy.",
-        startDate: '2025-04-10',
-        endDate: '2025-09-20',
+        name: 'Bhagiya weds Sariya',
+        description:
+            'Barakarta: Prof.Rabinarayana Dash. Kanyakarta: Jaminikanta Chand and Subashini Chand.',
+        tenure: '2014',
+        endDate: '',
         location: 'Rourkela, Odisha',
-        imgs: [
-            'https://youmeandtrends.com/wp-content/uploads/2018/03/most-beautiful-flower-wallpaper-world-colourful-4-desktop-worlds-top-beautiful-flowers-images-photos-with-most-flower-wallpaper-world-colourful-high-quality-for-computer-colorful-latest.jpg',
-        ],
+        imgs: ['/kartas/2014.jpg'],
     },
     {
-        id: 1,
-        name: 'Exotic Blossom',
-        description: 'A rare and vibrant flower that adds elegance to any garden.',
-        startDate: '2025-01-10',
-        endDate: '2025-12-31',
+        id: 5,
+        name: 'Purrusottam weds Padmavati',
+        description:
+            'Barakarta: Ashoka Ku. Mahapatra and Rekha Mohapatra. Kanyakarta: Binoy Ku. Das and Anita Das.',
+        tenure: '2015',
+        endDate: '',
         location: 'Bhubaneswar, Odisha',
-        imgs: ['https://tse4.mm.bing.net/th/id/OIP.RG58DaO7kXIPA2oTSLS6kAHaE8?pid=Api&P=0&h=180'],
+        imgs: ['/kartas/2015.jpg'],
     },
     {
-        id: 2,
-        name: 'Sunrise Garden',
-        description: 'A peaceful garden filled with sunshine and serenity.',
-        startDate: '2025-02-15',
-        endDate: '2025-08-15',
+        id: 6,
+        name: 'Padmamali weds Parikhyit',
+        description: 'Barakarta: Bimal Jena and Ranjita Das. Kanyakarta: Bimal Aas and Sindhu Sen.',
+        tenure: '2016',
+        endDate: '',
         location: 'Puri, Odisha',
-        imgs: ['https://wallpaperaccess.com/full/1238364.jpg'],
+        imgs: ['/kartas/2016.jpg'],
     },
     {
-        id: 3,
-        name: 'Petal Paradise',
-        description: 'An enchanting display of colorful flowers from around the world.',
-        startDate: '2025-03-01',
-        endDate: '2025-10-01',
+        id: 7,
+        name: 'Taopoi weds Sumanta',
+        description:
+            'Barakarta: Pradip Bhowmik and Rini Bhowmik. Kanyakarta: Harmohan Dash and Subhalaxmi Dash.',
+        tenure: '2017',
+        endDate: '',
         location: 'Cuttack, Odisha',
-        imgs: [
-            'https://webneel.com/wallpaper/sites/default/files/images/01-2014/2-flower-wallpaper.jpg',
-        ],
+        imgs: ['/kartas/2017.jpg'],
     },
     {
-        id: 4,
-        name: 'Blooming Beauty',
-        description: "The perfect blend of nature's charm and vibrant energy.",
-        startDate: '2025-04-10',
-        endDate: '2025-09-20',
+        id: 8,
+        name: 'Siba weds Kalijai',
+        description: 'Barakarta: Diabandhu Lenka. Kanyakarta: Mahendra nath Jena.',
+        tenure: '2018',
+        endDate: '',
         location: 'Rourkela, Odisha',
-        imgs: [
-            'https://youmeandtrends.com/wp-content/uploads/2018/03/most-beautiful-flower-wallpaper-world-colourful-4-desktop-worlds-top-beautiful-flowers-images-photos-with-most-flower-wallpaper-world-colourful-high-quality-for-computer-colorful-latest.jpg',
-        ],
+        imgs: ['/kartas/2018.jpg'],
+    },
+    {
+        id: 9,
+        name: 'Sankara weds Tusu',
+        description:
+            'Barakarta: Suranjana Mohapatra and Jhansi Das Mohapatra. Kanyakarta: Rajkishor Rana and Santilata Rana.',
+        tenure: '2019',
+        endDate: '',
+        location: 'Bhubaneswar, Odisha',
+        imgs: ['/kartas/2019.jpg'],
+    },
+    {
+        id: 10,
+        name: 'Sunrise Garden', // No data provided for 2020, reusing old placeholder
+        description: 'A peaceful garden filled with sunshine and serenity.', // Reusing old description
+        tenure: '2020',
+        endDate: '',
+        location: 'Puri, Odisha',
+        imgs: ['/kartas/2020.jpg'],
+    },
+    {
+        id: 11,
+        name: 'Sambhunath weds Samalei',
+        description:
+            'Barakarta: Madanmohan Sahu and Sukanti Sahu. Kanyakarta: Bhabendranath dey and Kabita Dey.',
+        tenure: '2021',
+        endDate: '',
+        location: 'Cuttack, Odisha',
+        imgs: ['/kartas/2021.jpg'],
+    },
+    {
+        id: 12,
+        name: 'Bara weds Kaniya',
+        description:
+            'Barakarta: Kailash Chandra Parida and Supriya Parida. Kanyakarta: Madan Saraogi and Anju Saraogi.',
+        tenure: '2022',
+        endDate: '',
+        location: 'Rourkela, Odisha',
+        imgs: ['/kartas/2022.jpg'],
+    },
+    {
+        id: 13,
+        name: 'Exotic Blossom', // No data provided for 2023, reusing old placeholder
+        description: 'A rare and vibrant flower that adds elegance to any garden.', // Reusing old description
+        tenure: '2023',
+        endDate: '',
+        location: 'Bhubaneswar, Odisha',
+        imgs: ['/kartas/2023.jpg'],
+    },
+    {
+        id: 14,
+        name: 'Sunrise Garden', // No Bara/Kanya names provided for 2024, reusing old placeholder
+        description:
+            'Barakarta: Kalikinkar Das and Soubhagini Mishra. Kanyakarta: Pankaj Ku. Jena and Suchitra Jena.', // Using available info as description
+        tenure: '2024',
+        endDate: '',
+        location: 'Puri, Odisha',
+        imgs: ['/kartas/2024.jpg'],
     },
 ];
-
 const KartaCard = ({ card }) => (
     <div className="karta-card">
         <div className="karta-card-image">
@@ -96,9 +150,7 @@ const KartaCard = ({ card }) => (
             <div className="karta-card-info">
                 <div className="karta-card-info-item">
                     <FaCalendar className="karta-icon" />
-                    <span>
-                        {card.startDate} - {card.endDate}
-                    </span>
+                    <span>{card.tenure}</span>
                 </div>
                 <div className="karta-card-info-item">
                     <FaMapMarkerAlt className="karta-icon" />

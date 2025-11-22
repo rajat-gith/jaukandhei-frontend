@@ -86,6 +86,7 @@
     font-size: 1rem;
     margin-top: 20px;
     transition: all 0.3s ease;
+    font-weight: 600;
 }
 
 .support-btn:hover {
@@ -94,26 +95,6 @@
 }
 
 /* === Quick Links === */
-.quick-links ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.quick-links li {
-    margin: 10px 0;
-    font-size: 1.05rem;
-    font-weight: 600;
-    letter-spacing: 0.3px;
-    text-transform: capitalize;
-    color: #fff;
-    cursor: pointer;
-    position: relative;
-    width: fit-content;
-    transition: all 0.3s ease;
-}
-
-/* Hover underline animation */
 .quick-links ul {
     list-style: none;
     padding: 0;
@@ -138,6 +119,7 @@
     transition: all 0.3s ease;
     position: relative;
     display: inline-block;
+    cursor: pointer;
 }
 
 /* Underline animation */
@@ -198,6 +180,77 @@
 }
 
 /* ------------------- */
+/* Donation Modal */
+/* ------------------- */
+
+.donation-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    padding: 20px;
+    animation: overlayFadeIn 0.3s ease;
+}
+
+@keyframes overlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.donation-modal {
+    position: relative;
+    background-color: #fff;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 700px;
+    padding: 30px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    animation: modalFadeIn 0.3s ease;
+}
+
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    z-index: 1;
+}
+
+.close-btn:hover {
+    color: #d4522b;
+}
+
+.donation-modal iframe {
+    border-radius: 8px;
+}
+
+/* ------------------- */
 /* Responsive Behavior */
 /* ------------------- */
 
@@ -243,5 +296,21 @@
     .footer-bottom {
         font-size: 0.9rem;
         border-radius: 20px 20px 0 0;
+    }
+
+    /* Modal responsive */
+    .donation-modal {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .donation-modal iframe {
+        height: 400px;
+    }
+
+    .close-btn {
+        top: 10px;
+        right: 10px;
+        font-size: 1.3rem;
     }
 }

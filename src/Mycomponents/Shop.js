@@ -6,7 +6,6 @@ export default function Shop() {
     const scrollRef = useRef(null);
 
     const storeImages = [
-        '/shop/craft1.jpeg',
         '/shop/craft2.jpg',
         '/shop/craft3.jpg',
         '/shop/craft4.jpg',

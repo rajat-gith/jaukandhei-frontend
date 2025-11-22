@@ -25,8 +25,8 @@
 }
 
 .info-featured-image-box {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
     flex-shrink: 0;
     border-radius: 12px;
     overflow: hidden;
@@ -48,21 +48,21 @@
 }
 
 .info-featured-name {
-    font-size: 32px;
+    font-size: 24px;
     font-weight: 700;
     margin: 0 0 8px 0;
     color: #1a1a1a;
 }
 
 .info-featured-position {
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     margin: 0;
     color: #666;
 }
 
 .info-featured-message {
-    font-size: 18px;
+    font-size: 14px;
     line-height: 1.7;
     margin: 0;
     color: #333;
