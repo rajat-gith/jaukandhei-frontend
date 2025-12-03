@@ -7,7 +7,7 @@ const Community = () => {
             <section className="community-section">
                 <div className="community-content">
                     <img
-                        src="/images/kinnar-group-1.jpg"
+                        src="kinnar2.jpg"
                         alt="Kinnar Community Collaboration"
                         className="community-image"
                     />
@@ -24,18 +24,14 @@ const Community = () => {
                             communities.
                         </p>
                     </div>
-                    <img
-                        src="kinnar-group-2.jpg"
-                        alt="Kinnar Community Performance"
-                        className="community-image"
-                    />
+                 
                 </div>
             </section>
 
             <section className="community-section">
                 <div className="community-content">
                     <img
-                        src="drdo-collaboration-1.jpg"
+                        src="Drdo.jpg"
                         alt="DRDO Collaboration Group"
                         className="community-image"
                     />
@@ -52,18 +48,56 @@ const Community = () => {
                             between diverse communities through cultural and creative engagement.
                         </p>
                     </div>
-                    <img
-                        src="drdo-collaboration-2.jpg"
-                        alt="DRDO Collaboration Celebration"
-                        className="community-image"
-                    />
+                    
                 </div>
             </section>
 
             <section className="community-section">
                 <div className="community-content">
                     <img
-                        src="marwadi-collaboration.jpg"
+                        src="Brahmana.jpg"
+                        alt="Brahmana Collaboration"
+                        className="community-image"
+                    />
+                    <div className="community-text">
+                        <h2>
+                            The Jau Kandhei Bahaghara community in collaboration with the Brahmana
+                            community of Balasore
+                        </h2>
+                        <p>
+                            This collaboration bridges communities through art, empathy, and shared
+                            cultural experiences. Together, they create opportunities for
+                            cross-community learning, sustainable livelihoods, and inclusive
+                            cultural growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="community-section">
+                <div className="community-content">
+                    <img
+                        src="barika.jpg"
+                        alt="Barika Collaboration"
+                        className="community-image"
+                    />
+                    <div className="community-text">
+                        <h2>
+                            The Jau Kandhei Bahaghara community in collaboration with the Barika
+                            community of Balasore
+                        </h2>
+                        <p>
+                            This collaboration bridges communities through art, empathy, and shared
+                            cultural experiences. Together, they create opportunities for
+                            cross-community learning, sustainable livelihoods, and inclusive
+                            cultural growth.
+                        </p>
+                    </div>
+                </div>
+            </section>
+            <section className="community-section">
+                <div className="community-content">
+                    <img
+                        src="marwadi.jpg"
                         alt="Marwadi Collaboration"
                         className="community-image"
                     />
