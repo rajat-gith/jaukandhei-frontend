@@ -102,13 +102,14 @@ export default function Footer() {
                         <h2>Contact Us</h2>
                         <ul>
                             <li>
-                                <span>📍</span> 123, Lorem Street, Bhubaneswar
+                                <span>📍</span> Jaukandhei Bahaghara utsav commitee,<br /> Biswashree Press,F.M collage road, Cinema Bazar, Balasore, 756001.
                             </li>
                             <li>
-                                <span>✉️</span> contact@yourorg.org
+                                <span>✉️</span> jaukandheibahaghara.utsav11@gmail.com
                             </li>
                             <li>
-                                <span>📞</span> +91 98765 43210
+                                <span>📞</span> +91 94371 60005 <br />
+                                                 +91 94395 39229
                             </li>
                         </ul>
                     </div>

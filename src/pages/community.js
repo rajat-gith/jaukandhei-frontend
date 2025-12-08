@@ -104,7 +104,7 @@ const Community = () => {
                     <div className="community-text">
                         <h2>
                             The Jau Kandhei Bahaghara community in collaboration with the Marwadi
-                            community of Balasore
+                            community of Balasore.
                         </h2>
                         <p>
                             This collaboration bridges communities through art, empathy, and shared
@@ -115,6 +115,7 @@ const Community = () => {
                     </div>
                 </div>
             </section>
+              
         </div>
     );
 };

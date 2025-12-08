@@ -10,10 +10,7 @@ const eventData = [
         img: 'event2.jpeg',
         description: 'Dramatic performances depicting local folklore',
     },
-    {
-        img: 'event3.jpeg',
-        description: 'Cultural procession celebrating unity and devotion',
-    },
+   
     {
         img: 'event4.JPG',
         description: 'Ceremonial turmeric rituals filled with joy',
@@ -26,12 +23,17 @@ const eventData = [
         img: 'event6.jpg',
         description: 'Pious rituals symbolizing heritage and purity',
     },
+   
     {
-        img: 'event7.JPG',
+        img: 'event8.jpg',
         description: 'Pious rituals symbolizing heritage and purity',
     },
     {
-        img: 'event8.jpg',
+        img: 'event9.jpeg',
+        description: 'Pious rituals symbolizing heritage and purity',
+    },
+    {
+        img: 'event10.jpeg',
         description: 'Pious rituals symbolizing heritage and purity',
     },
 ];
