@@ -90,11 +90,7 @@ export default function Footer() {
                                     )}
                                 </li>
                             ))}
-                            <li>
-                                <Link to="/get-involved">
-                                    <span>Get Involved</span>
-                                </Link>
-                            </li>
+                           
                         </ul>
                     </div>
                     {/* === Contact Section === */}

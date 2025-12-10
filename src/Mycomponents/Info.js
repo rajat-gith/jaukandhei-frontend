@@ -24,6 +24,11 @@ const infoData = [
         content: 'Anjali Panda',
         post: 'Vice President',
     },
+     {
+        image: '/info/Kumar Gopal Secretary.jpeg',
+        content: 'Kumar Gopal',
+        post: 'Secretary',
+    },
     {
         image: '/info/Raghunath_Lenka_Asst_Secretary.jpeg',
         content: 'Raghunath Lenka',
@@ -34,11 +39,7 @@ const infoData = [
         content: 'Rajesh Giri',
         post: 'Assistant Secretary',
     },
-    {
-        image: '/info/Byomanath Rath Cashier.jpeg',
-        content: 'Byomanath Rath',
-        post: 'Cashier',
-    },
+   
 ];
 
 function Info() {
